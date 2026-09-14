@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy · Everyday Crumb Corner</title>
+  <meta name="description" content="Privacy Policy for Everyday Crumb Corner. Learn how we handle your data, cookies, and your rights.">
+  <meta name="author" content="Everyday Crumb Corner">
+  <link rel="canonical" href="https://www.everydaycrumbcorner.com/privacy.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Privacy Policy · Everyday Crumb Corner">
+  <meta property="og:description" content="How we collect, use, and protect your information.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.everydaycrumbcorner.com/privacy.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&h=630&fit=crop">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy - Everyday Crumb Corner",
+    "url": "https://www.everydaycrumbcorner.com/privacy.html",
+    "description": "Privacy policy outlining data practices for Everyday Crumb Corner recipe blog."
+  }
+  </script>
+  <!-- Fonts & styling (same as homepage) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ----- RESET & VARIABLES (identical to homepage) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --cream: #fdfaf6;
+      --paper: #ffffff;
+      --ink: #1e1c1a;
+      --soft-ink: #3e3a37;
+      --muted: #6b6560;
+      --line: #e7e2db;
+      --accent: #b45f3b;
+      --accent-hover: #9a4e2f;
+      --accent-light: #f5ede7;
+      --serif: 'Lora', Georgia, serif;
+      --sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --max-width: 1280px;
+      --article-width: 720px;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.02);
+    }
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* ----- TYPOGRAPHY ----- */
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+    h1 {
+      font-size: 2.6rem;
+    }
+    h2 {
+      font-size: 1.9rem;
+      margin-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.35rem;
+    }
+    h4 {
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+    /* ----- LAYOUT ----- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .article-container {
+      max-width: var(--article-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    /* ----- HEADER (same as homepage) ----- */
+    .site-header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      padding: 0.9rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .logo-icon {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      background: var(--accent);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(45deg);
+      margin-right: 0.2rem;
+    }
+    .logo-text {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    .logo-text span {
+      color: var(--accent);
+    }
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.8rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--soft-ink);
+    }
+    .main-nav a:hover {
+      color: var(--accent);
+    }
+    .header-search {
+      display: flex;
+      align-items: center;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 0.3rem 0.3rem 0.3rem 1rem;
+    }
+    .header-search input {
+      border: none;
+      background: transparent;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      outline: none;
+      width: 160px;
+    }
+    .header-search button {
+      background: var(--accent);
+      border: none;
+      border-radius: 30px;
+      padding: 0.4rem 1rem;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    /* ----- BUTTONS / TAGS ----- */
+    .cat-tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+    }
+    .read-time {
+      color: var(--muted);
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    /* ----- PRIVACY PAGE SPECIFIC ----- */
+    .privacy-view {
+      padding: 2.5rem 0 4rem;
+    }
+    .privacy-header {
+      margin-bottom: 2rem;
+    }
+    .privacy-header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .privacy-header p {
+      color: var(--soft-ink);
+      font-size: 1.1rem;
+      max-width: 700px;
+      line-height: 1.7;
+    }
+    .privacy-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 2rem;
+    }
+    .privacy-card h2 {
+      font-size: 1.6rem;
+      margin-top: 1.8rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 0.5rem;
+    }
+    .privacy-card h2:first-of-type {
+      margin-top: 0;
+    }
+    .privacy-card h3 {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .privacy-card p {
+      margin-bottom: 1rem;
+      color: var(--soft-ink);
+    }
+    .privacy-card ul, .privacy-card ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1.2rem;
+      color: var(--soft-ink);
+    }
+    .privacy-card li {
+      margin-bottom: 0.4rem;
+    }
+    .privacy-card strong {
+      color: var(--ink);
+    }
+    .privacy-card a {
+      color: var(--accent);
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border 0.15s;
+    }
+    .privacy-card a:hover {
+      border-bottom-color: var(--accent);
+    }
+    .privacy-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .privacy-meta span strong {
+      color: var(--ink);
+    }
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1.2rem 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 0.75rem 1rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--accent-light);
+      font-weight: 600;
+      color: var(--ink);
+    }
+    td {
+      background: var(--paper);
+      color: var(--soft-ink);
+    }
+    /* ----- FOOTER (same as homepage) ----- */
+    .site-footer {
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+      padding: 3rem 0 2rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    .footer-grid h4 {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .footer-grid ul {
+      list-style: none;
+    }
+    .footer-grid li {
+      margin-bottom: 0.5rem;
+      color: var(--muted);
+    }
+    .footer-grid a:hover {
+      color: var(--accent);
+    }
+    .footer-bottom {
+      border-top: 1px solid var(--line);
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 1000px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .privacy-card {
+        padding: 1.8rem;
+      }
+    }
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .privacy-header h1 {
+        font-size: 2rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .privacy-card {
+        padding: 1.5rem;
+      }
+      .privacy-meta {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+    }
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER (same as homepage) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"></span>
+        <span class="logo-text">Everyday<span>Crumb</span>Corner</span>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html" style="color:var(--accent);">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+      <div class="header-search">
+        <input type="text" id="searchInput" placeholder="Search recipes..." aria-label="Search recipes">
+        <button onclick="performSearch()">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PRIVACY PAGE MAIN CONTENT -->
+  <main class="privacy-view container">
+    <div class="privacy-header">
+      <span class="cat-tag" style="margin-bottom:0.75rem; display:inline-block;">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p>Your privacy matters to us. This page explains what information we collect, how we use it, and the choices you have. We keep things simple and transparent — just like our recipes.</p>
+    </div>
+
+    <div class="privacy-card">
+      <div class="privacy-meta" style="margin-top:0; padding-top:0; border-top:none; margin-bottom:1.5rem;">
+        <span><strong>Effective date:</strong> January 1, 2025</span>
+        <span><strong>Last updated:</strong> January 1, 2025</span>
+      </div>
+
+      <p>Everyday Crumb Corner (“we”, “us”, or “our”) operates the website <a href="https://www.everydaycrumbcorner.com">www.everydaycrumbcorner.com</a> (the “Site”). This Privacy Policy describes how we collect, use, and share information when you visit our Site, leave comments, or contact us.</p>
+
+      <h2>1. Information we collect</h2>
+      <p>We collect only the information we need to run the Site and improve your experience. This includes:</p>
+      <ul>
+        <li><strong>Information you give us voluntarily:</strong> When you fill out a contact form, leave a comment, or subscribe to a newsletter, you may provide your name, email address, and any message content.</li>
+        <li><strong>Information collected automatically:</strong> Like most websites, we use cookies and similar technologies to collect standard log data such as your IP address, browser type, operating system, referring URLs, and pages viewed. This helps us understand how people use the Site.</li>
+        <li><strong>Information from third‑party services:</strong> If you interact with embedded content (e.g., YouTube videos) or social sharing buttons, those services may collect data according to their own privacy policies.</li>
+      </ul>
+
+      <h2>2. How we use your information</h2>
+      <p>We use the information we collect for the following purposes:</p>
+      <ul>
+        <li>To respond to your questions, comments, and requests.</li>
+        <li>To send you updates or newsletters if you have opted in (you can unsubscribe at any time).</li>
+        <li>To analyze Site traffic and improve our recipes, content, and user experience.</li>
+        <li>To detect, prevent, and address technical issues or abuse.</li>
+        <li>To comply with legal obligations.</li>
+      </ul>
+
+      <h2>3. Cookies and tracking technologies</h2>
+      <p>We use cookies and similar technologies to enhance your browsing experience, remember your preferences, and gather analytics. For detailed information about the specific cookies we use and how to manage them, please see our <a href="cookies.html">Cookies Policy</a>.</p>
+
+      <h2>4. Sharing your information</h2>
+      <p>We do not sell, trade, or rent your personal information to third parties. We may share information in the following limited circumstances:</p>
+      <ul>
+        <li><strong>Service providers:</strong> We may use trusted third‑party companies to help us operate the Site (e.g., email delivery, analytics). These providers are contractually obligated to protect your data and only use it for the services they provide to us.</li>
+        <li><strong>Legal requirements:</strong> We may disclose information if required by law or in response to valid requests by public authorities (e.g., a court order or subpoena).</li>
+        <li><strong>Business transfers:</strong> If we are involved in a merger, acquisition, or asset sale, your information may be transferred as part of that transaction. We will notify you before your data is transferred and becomes subject to a different privacy policy.</li>
+      </ul>
+
+      <h2>5. Your rights and choices</h2>
+      <p>Depending on where you live, you may have certain rights regarding your personal information, including:</p>
+      <ul>
+        <li><strong>Access:</strong> You can request a copy of the personal data we hold about you.</li>
+        <li><strong>Correction:</strong> You can ask us to correct inaccurate or incomplete information.</li>
+        <li><strong>Deletion:</strong> You can request that we delete your personal data, subject to certain exceptions.</li>
+        <li><strong>Opt‑out of marketing:</strong> You can unsubscribe from our emails at any time by clicking the “unsubscribe” link at the bottom of our messages.</li>
+        <li><strong>Cookies:</strong> You can manage or disable cookies through your browser settings. See our <a href="cookies.html">Cookies Policy</a> for more details.</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us at <a href="mailto:hello@everydaycrumbcorner.com">hello@everydaycrumbcorner.com</a>. We will respond within a reasonable timeframe.</p>
+
+      <h2>6. Data retention</h2>
+      <p>We retain your personal information only for as long as necessary to fulfill the purposes described in this policy, unless a longer retention period is required or permitted by law. For example, contact form submissions are kept for up to 24 months to help us follow up on ongoing conversations.</p>
+
+      <h2>7. Children’s privacy</h2>
+      <p>Our Site is not directed to children under the age of 13 (or 16 in some jurisdictions). We do not knowingly collect personal information from children. If you believe we have inadvertently collected such information, please contact us so we can delete it.</p>
+
+      <h2>8. Third‑party links and embedded content</h2>
+      <p>Our Site may contain links to external websites or embed content from platforms like YouTube, Instagram, or Pinterest. We are not responsible for the privacy practices of those third parties. We encourage you to review their privacy policies before providing any personal information.</p>
+
+      <h2>9. Security</h2>
+      <p>We take reasonable measures to protect your personal information from unauthorized access, loss, or misuse. However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your data, we cannot guarantee absolute security.</p>
+
+      <h2>10. International transfers</h2>
+      <p>Your information may be transferred to and processed in countries other than your own. We take steps to ensure that any such transfers comply with applicable data protection laws and that your information remains protected.</p>
+
+      <h2>11. Changes to this policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we do, we will revise the “Last updated” date at the top of this page. We encourage you to review this page periodically to stay informed about how we protect your information.</p>
+
+      <h2>12. Contact us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please reach out to us:</p>
+      <ul>
+        <li>By email: <a href="mailto:hello@everydaycrumbcorner.com">hello@everydaycrumbcorner.com</a></li>
+        <li>By mail: Everyday Crumb Corner, PO Box 214, Portland, OR 97201</li>
+      </ul>
+
+      <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--line);">
+        <p style="font-size:0.9rem; margin-bottom:0;">This Privacy Policy is provided for general information and does not constitute legal advice. If you have specific legal questions, please consult a qualified professional.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (same as homepage) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom:0.75rem;">
+            <span class="logo-icon" style="width:22px;height:22px;"></span>
+            <span class="logo-text" style="font-size:1.3rem;">Everyday<span>Crumb</span>Corner</span>
+          </div>
+          <p style="color:var(--muted); max-width:260px;">Simple, honest recipes and kitchen wisdom for everyday cooking. Made with care in a small home kitchen.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html?cat=breakfast">Breakfast</a></li>
+            <li><a href="categories.html?cat=baking">Baking</a></li>
+            <li><a href="categories.html?cat=dinner">Dinner</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Everyday Crumb Corner. All rights reserved. Built with love and butter.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Search functionality (consistent with homepage)
+    function performSearch() {
+      const term = document.getElementById('searchInput').value.trim();
+      if (term) {
+        alert(`Searching for "${term}" — this would normally take you to the homepage results.`);
+        // In a real site: window.location.href = 'index.html?search=' + encodeURIComponent(term);
+      }
+    }
+
+    // Allow Enter key on search input
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        performSearch();
+      }
+    });
+  </script>
+</body>
+</html>

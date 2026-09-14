@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact · Everyday Crumb Corner</title>
+  <meta name="description" content="Get in touch with Everyday Crumb Corner. Questions, recipe feedback, or just saying hello — we'd love to hear from you.">
+  <meta name="author" content="Everyday Crumb Corner">
+  <link rel="canonical" href="https://www.everydaycrumbcorner.com/contact.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact · Everyday Crumb Corner">
+  <meta property="og:description" content="Questions, recipe feedback, or just saying hello — we'd love to hear from you.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.everydaycrumbcorner.com/contact.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&h=630&fit=crop">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Everyday Crumb Corner",
+    "url": "https://www.everydaycrumbcorner.com/contact.html",
+    "description": "Contact page for Everyday Crumb Corner recipe blog."
+  }
+  </script>
+  <!-- Fonts & styling (same as homepage) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ----- RESET & VARIABLES (identical to homepage) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --cream: #fdfaf6;
+      --paper: #ffffff;
+      --ink: #1e1c1a;
+      --soft-ink: #3e3a37;
+      --muted: #6b6560;
+      --line: #e7e2db;
+      --accent: #b45f3b;
+      --accent-hover: #9a4e2f;
+      --accent-light: #f5ede7;
+      --serif: 'Lora', Georgia, serif;
+      --sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --max-width: 1280px;
+      --article-width: 720px;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.02);
+    }
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* ----- TYPOGRAPHY ----- */
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+    h1 {
+      font-size: 2.6rem;
+    }
+    h2 {
+      font-size: 1.9rem;
+      margin-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.35rem;
+    }
+    h4 {
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+    /* ----- LAYOUT ----- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .article-container {
+      max-width: var(--article-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    /* ----- HEADER (same as homepage) ----- */
+    .site-header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      padding: 0.9rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .logo-icon {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      background: var(--accent);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(45deg);
+      margin-right: 0.2rem;
+    }
+    .logo-text {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    .logo-text span {
+      color: var(--accent);
+    }
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.8rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--soft-ink);
+    }
+    .main-nav a:hover {
+      color: var(--accent);
+    }
+    .header-search {
+      display: flex;
+      align-items: center;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 0.3rem 0.3rem 0.3rem 1rem;
+    }
+    .header-search input {
+      border: none;
+      background: transparent;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      outline: none;
+      width: 160px;
+    }
+    .header-search button {
+      background: var(--accent);
+      border: none;
+      border-radius: 30px;
+      padding: 0.4rem 1rem;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    /* ----- BUTTONS / TAGS ----- */
+    .cat-tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+    }
+    .read-time {
+      color: var(--muted);
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    /* ----- CONTACT PAGE SPECIFIC ----- */
+    .contact-view {
+      padding: 2.5rem 0 4rem;
+    }
+    .contact-header {
+      margin-bottom: 2rem;
+    }
+    .contact-header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .contact-header p {
+      color: var(--soft-ink);
+      font-size: 1.1rem;
+      max-width: 600px;
+      line-height: 1.7;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      margin: 2.5rem 0;
+    }
+    .contact-info-block {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-info-block h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 0.75rem;
+    }
+    .contact-info-block p {
+      margin-bottom: 1.2rem;
+      color: var(--soft-ink);
+      font-size: 1rem;
+    }
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact-detail .icon {
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+    .contact-detail strong {
+      display: block;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.15rem;
+    }
+    .contact-detail a {
+      color: var(--accent);
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+    }
+    .contact-detail a:hover {
+      border-bottom-color: var(--accent);
+    }
+    .contact-form-block {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-form-block h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 0.75rem;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      font-size: 0.9rem;
+      margin-bottom: 0.35rem;
+      color: var(--soft-ink);
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      background: var(--cream);
+      transition: border 0.15s, box-shadow 0.15s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(180, 95, 59, 0.08);
+    }
+    .form-group textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+    .form-group select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b6560' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 12px;
+    }
+    .btn-submit {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.9rem 2rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+    }
+    .btn-submit:hover {
+      background: var(--accent-hover);
+    }
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+      text-align: center;
+    }
+    .faq-mini {
+      margin: 2.5rem 0 0;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--line);
+    }
+    .faq-mini h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .faq-mini .faq-item {
+      border-bottom: 1px solid var(--line);
+      padding: 0.9rem 0;
+      cursor: pointer;
+    }
+    .faq-mini .faq-item h4 {
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+    }
+    .faq-mini .faq-item p {
+      margin-top: 0.6rem;
+      color: var(--soft-ink);
+      font-size: 0.95rem;
+      display: none;
+    }
+    .faq-mini .faq-item.open p {
+      display: block;
+    }
+    /* ----- FOOTER (same as homepage) ----- */
+    .site-footer {
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+      padding: 3rem 0 2rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    .footer-grid h4 {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .footer-grid ul {
+      list-style: none;
+    }
+    .footer-grid li {
+      margin-bottom: 0.5rem;
+      color: var(--muted);
+    }
+    .footer-grid a:hover {
+      color: var(--accent);
+    }
+    .footer-bottom {
+      border-top: 1px solid var(--line);
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 1000px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .contact-header h1 {
+        font-size: 2rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-info-block,
+      .contact-form-block {
+        padding: 1.5rem;
+      }
+    }
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER (same as homepage) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"></span>
+        <span class="logo-text">Everyday<span>Crumb</span>Corner</span>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" style="color:var(--accent);">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+      <div class="header-search">
+        <input type="text" id="searchInput" placeholder="Search recipes..." aria-label="Search recipes">
+        <button onclick="performSearch()">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTACT PAGE MAIN CONTENT -->
+  <main class="contact-view container">
+    <div class="contact-header">
+      <span class="cat-tag" style="margin-bottom:0.75rem; display:inline-block;">Get in touch</span>
+      <h1>Contact Everyday Crumb Corner</h1>
+      <p>Whether you have a question about a recipe, want to share your own kitchen win, or are interested in collaborating — we’re always happy to hear from you. Drop us a note and we’ll get back to you within a couple of days.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- LEFT: CONTACT INFO -->
+      <div class="contact-info-block">
+        <h2>Reach us directly</h2>
+        <p>Prefer email? Use the form or write to us at the address below. We read every message.</p>
+
+        <div class="contact-detail">
+          <span class="icon">✉️</span>
+          <div>
+            <strong>General & recipe questions</strong>
+            <a href="mailto:hello@everydaycrumbcorner.com">hello@everydaycrumbcorner.com</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <span class="icon">🤝</span>
+          <div>
+            <strong>Collaborations & press</strong>
+            <a href="mailto:partners@everydaycrumbcorner.com">partners@everydaycrumbcorner.com</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <span class="icon">📬</span>
+          <div>
+            <strong>Snail mail</strong>
+            <span style="color:var(--soft-ink);">Everyday Crumb Corner<br>PO Box 214<br>Portland, OR 97201</span>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--line);">
+          <p style="font-size:0.9rem; margin-bottom:0.5rem;"><strong>Response time:</strong> Usually within 2–3 business days.</p>
+          <p style="font-size:0.9rem; margin-bottom:0;">For urgent recipe help, please put “URGENT” in the subject line and we’ll do our best to prioritize it.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT: CONTACT FORM -->
+      <div class="contact-form-block">
+        <h2>Send a message</h2>
+        <form onsubmit="handleContactSubmit(event)">
+          <div class="form-group">
+            <label for="contactName">Your name</label>
+            <input type="text" id="contactName" placeholder="e.g. Jamie Rivera" required>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email address</label>
+            <input type="email" id="contactEmail" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <select id="contactSubject">
+              <option value="general">General question</option>
+              <option value="recipe">Recipe feedback or question</option>
+              <option value="collab">Collaboration / press</option>
+              <option value="guest">Guest post idea</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" placeholder="Tell us what’s on your mind…" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send message →</button>
+          <p class="form-note">We’ll never share your email. Promise.</p>
+        </form>
+      </div>
+    </div>
+
+    <!-- MINI FAQ (contact-related) -->
+    <div class="faq-mini">
+      <h3>Before you write…</h3>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <h4>Can I get a recipe scaled or converted? <span>+</span></h4>
+        <p>Absolutely — include the recipe name and the measurements you need, and we’ll do our best to help.</p>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <h4>Do you accept sponsored posts? <span>+</span></h4>
+        <p>We occasionally partner with brands that align with our values. Email partners@everydaycrumbcorner.com with details.</p>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <h4>I found a typo or broken link. <span>+</span></h4>
+        <p>Thank you for catching it! Send us the page URL and a quick note — we’ll fix it right away.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (same as homepage) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom:0.75rem;">
+            <span class="logo-icon" style="width:22px;height:22px;"></span>
+            <span class="logo-text" style="font-size:1.3rem;">Everyday<span>Crumb</span>Corner</span>
+          </div>
+          <p style="color:var(--muted); max-width:260px;">Simple, honest recipes and kitchen wisdom for everyday cooking. Made with care in a small home kitchen.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html?cat=breakfast">Breakfast</a></li>
+            <li><a href="categories.html?cat=baking">Baking</a></li>
+            <li><a href="categories.html?cat=dinner">Dinner</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Everyday Crumb Corner. All rights reserved. Built with love and butter.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ toggle (same as homepage)
+    function toggleFaq(el) {
+      el.classList.toggle('open');
+      const span = el.querySelector('h4 span');
+      if (span) span.textContent = el.classList.contains('open') ? '−' : '+';
+    }
+
+    // Contact form handler
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const subject = document.getElementById('contactSubject').value;
+      const message = document.getElementById('contactMessage').value.trim();
+
+      if (!name || !email || !message) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+
+      // Simulate submission
+      alert(`Thanks, ${name}! Your message has been sent. We'll reply to ${email} within 2–3 business days.`);
+      
+      // Reset form
+      e.target.reset();
+    }
+
+    // Search (kept consistent with homepage behavior — but this page is standalone)
+    function performSearch() {
+      const term = document.getElementById('searchInput').value.trim();
+      if (term) {
+        // Redirect to home with search query (in a real setup, you'd use index.html?search=...)
+        // For this static demo, we'll just alert.
+        alert(`Searching for "${term}" — this would normally take you to the homepage results.`);
+        // In a real site: window.location.href = 'index.html?search=' + encodeURIComponent(term);
+      }
+    }
+
+    // Allow Enter key on search input
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        performSearch();
+      }
+    });
+  </script>
+</body>
+</html>

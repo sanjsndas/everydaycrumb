@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · Everyday Crumb Corner</title>
+  <meta name="description" content="Meet Clara Bennett and learn about the philosophy behind Everyday Crumb Corner — simple, honest recipes and kitchen wisdom.">
+  <meta name="author" content="Everyday Crumb Corner">
+  <link rel="canonical" href="https://www.everydaycrumbcorner.com/about.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Everyday Crumb Corner">
+  <meta property="og:description" content="Simple, honest recipes and kitchen wisdom for real life.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.everydaycrumbcorner.com/about.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&h=630&fit=crop">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Everyday Crumb Corner",
+    "url": "https://www.everydaycrumbcorner.com/about.html",
+    "description": "The story and philosophy behind Everyday Crumb Corner, an independent recipe blog by Clara Bennett.",
+    "author": {
+      "@type": "Person",
+      "name": "Clara Bennett"
+    }
+  }
+  </script>
+  <!-- Font & minimal styling (consistent with homepage) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ----- RESET & VARIABLES (same as homepage) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --cream: #fdfaf6;
+      --paper: #ffffff;
+      --ink: #1e1c1a;
+      --soft-ink: #3e3a37;
+      --muted: #6b6560;
+      --line: #e7e2db;
+      --accent: #b45f3b;
+      --accent-hover: #9a4e2f;
+      --accent-light: #f5ede7;
+      --serif: 'Lora', Georgia, serif;
+      --sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --max-width: 1280px;
+      --article-width: 720px;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.02);
+    }
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+    h1 {
+      font-size: 2.6rem;
+    }
+    h2 {
+      font-size: 1.9rem;
+      margin-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.35rem;
+    }
+    h4 {
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .article-container {
+      max-width: var(--article-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    /* ----- HEADER (exactly as homepage) ----- */
+    .site-header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      padding: 0.9rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .logo-icon {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      background: var(--accent);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(45deg);
+      margin-right: 0.2rem;
+    }
+    .logo-text {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    .logo-text span {
+      color: var(--accent);
+    }
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.8rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--soft-ink);
+    }
+    .main-nav a:hover {
+      color: var(--accent);
+    }
+    .header-search {
+      display: flex;
+      align-items: center;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 0.3rem 0.3rem 0.3rem 1rem;
+    }
+    .header-search input {
+      border: none;
+      background: transparent;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      outline: none;
+      width: 160px;
+    }
+    .header-search button {
+      background: var(--accent);
+      border: none;
+      border-radius: 30px;
+      padding: 0.4rem 1rem;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .cat-tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+    }
+    .read-time {
+      color: var(--muted);
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    /* ----- FOOTER (same) ----- */
+    .site-footer {
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+      padding: 3rem 0 2rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    .footer-grid h4 {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .footer-grid ul {
+      list-style: none;
+    }
+    .footer-grid li {
+      margin-bottom: 0.5rem;
+      color: var(--muted);
+    }
+    .footer-grid a:hover {
+      color: var(--accent);
+    }
+    .footer-bottom {
+      border-top: 1px solid var(--line);
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+    /* ----- ABOUT SPECIFIC ----- */
+    .about-hero {
+      background: var(--paper);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--line);
+      padding: 2.5rem 2.5rem 2rem;
+      margin: 2.5rem 0 2rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .about-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .about-hero .subhead {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      color: var(--accent);
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    .about-hero p {
+      max-width: 700px;
+      color: var(--soft-ink);
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      margin: 2.5rem 0 1.5rem;
+    }
+    .about-grid img {
+      border-radius: var(--radius-md);
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+    .about-grid-content h2 {
+      margin-bottom: 1.2rem;
+      font-size: 1.9rem;
+    }
+    .about-grid-content p {
+      margin-bottom: 1.2rem;
+      color: var(--soft-ink);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+      margin: 3rem 0 2rem;
+    }
+    .value-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 1.8rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.1s ease;
+    }
+    .value-card:hover {
+      transform: translateY(-2px);
+    }
+    .value-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      color: var(--accent);
+    }
+    .value-card p {
+      color: var(--soft-ink);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+    .author-note {
+      background: var(--accent-light);
+      border-left: 6px solid var(--accent);
+      border-radius: var(--radius-sm);
+      padding: 2rem 2.2rem;
+      margin: 2.5rem 0 1rem;
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+    }
+    .author-note-avatar {
+      width: 80px;
+      height: 80px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      color: white;
+      flex-shrink: 0;
+    }
+    .author-note-content p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--soft-ink);
+      margin-bottom: 0.5rem;
+    }
+    .author-note-content .signature {
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--accent);
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+    .back-home {
+      display: inline-block;
+      margin: 1rem 0 2rem;
+      font-weight: 500;
+      color: var(--accent);
+    }
+    .back-home:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 1000px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+      .values-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .about-hero h1 {
+        font-size: 2.2rem;
+      }
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+      .author-note {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .about-hero {
+        padding: 1.8rem;
+      }
+    }
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER (identical to homepage, with working links) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"></span>
+        <span class="logo-text">Everyday<span>Crumb</span>Corner</span>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+      <div class="header-search">
+        <input type="text" id="searchInput" placeholder="Search recipes..." aria-label="Search recipes">
+        <button onclick="window.location.href='index.html'">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT — ABOUT PAGE -->
+  <main class="container">
+    <!-- Hero / Intro -->
+    <div class="about-hero">
+      <span class="cat-tag" style="margin-bottom:0.75rem;">Our story</span>
+      <h1>About Everyday Crumb Corner</h1>
+      <div class="subhead">Simple, honest recipes & kitchen wisdom for real life.</div>
+      <p>Everyday Crumb Corner began as a personal notebook — a place to scribble down the recipes that actually worked, the ones that friends and family asked for again and again. It has since grown into a small, independent blog read by home cooks around the world. But the heart of it remains the same: approachable food, tested thoroughly, written without pretense.</p>
+    </div>
+
+    <!-- Two‑column: image + philosophy -->
+    <div class="about-grid">
+      <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&h=600&fit=crop" alt="A warm, inviting kitchen scene with baking tools and fresh bread">
+      <div class="about-grid-content">
+        <h2>Why “Everyday Crumb”?</h2>
+        <p>The name is a nod to the small, everyday moments that make cooking meaningful — the crumbs on the counter after slicing a loaf, the first sip of coffee while the oven preheats, the quiet satisfaction of a meal shared. We believe that good food doesn’t have to be complicated or Instagram‑perfect. It just has to be honest.</p>
+        <p>Every recipe you’ll find here has been tested at least three times in a home kitchen. We include weights and volume measurements, substitution notes, and the little tips that make a difference. No fluff, no untested experiments — just reliable recipes you can count on.</p>
+      </div>
+    </div>
+
+    <!-- Values / what we stand for -->
+    <div class="values-grid">
+      <div class="value-card">
+        <h3>Tested & true</h3>
+        <p>Each recipe is made multiple times before it’s published. We measure carefully, note what works, and tell you when something is flexible and when it isn’t.</p>
+      </div>
+      <div class="value-card">
+        <h3>Everyday ingredients</h3>
+        <p>You won’t find obscure flours or specialty equipment here. Our recipes use what you likely already have in your pantry — and if we suggest a swap, we explain why.</p>
+      </div>
+      <div class="value-card">
+        <h3>No‑nonsense writing</h3>
+        <p>We skip the long personal essays before the recipe (unless there’s a truly useful story). You’ll find clear instructions, helpful notes, and a printable card at the bottom of each post.</p>
+      </div>
+    </div>
+
+    <!-- Author note — personal and warm -->
+    <div class="author-note">
+      <div class="author-note-avatar">C</div>
+      <div class="author-note-content">
+        <p><strong>Hi, I’m Clara Bennett.</strong> I spent a decade working in pastry kitchens — early mornings, precise measurements, and the relentless pursuit of the perfect croissant. These days, I cook in a small home kitchen with a slightly battered cast‑iron pan and a well‑loved sourdough starter. I started Everyday Crumb Corner because I wanted to share the kind of cooking that fits into a real life: forgiving, flavorful, and deeply satisfying.</p>
+        <p>When I’m not testing recipes, you’ll find me at the farmers’ market, reading old cookbooks, or teaching my neighbor’s kid how to crack an egg with one hand.</p>
+        <div class="signature">— Clara</div>
+      </div>
+    </div>
+
+    <!-- Closing / link back home -->
+    <div style="text-align:center; margin: 2rem 0 1rem;">
+      <a href="index.html" class="back-home">← Back to all recipes</a>
+    </div>
+  </main>
+
+  <!-- FOOTER (identical to homepage, with working static links) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom:0.75rem;">
+            <span class="logo-icon" style="width:22px;height:22px;"></span>
+            <span class="logo-text" style="font-size:1.3rem;">Everyday<span>Crumb</span>Corner</span>
+          </div>
+          <p style="color:var(--muted); max-width:260px;">Simple, honest recipes and kitchen wisdom for everyday cooking. Made with care in a small home kitchen.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Breakfast</a></li>
+            <li><a href="categories.html">Baking</a></li>
+            <li><a href="categories.html">Dinner</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Everyday Crumb Corner. All rights reserved. Built with love and butter.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Minimal script to keep search working (redirects to homepage with search)
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const term = this.value.trim();
+        if (term) {
+          // In a real static site, you'd redirect to a search page.
+          // For this demo, we'll send them to the homepage with a query hint.
+          window.location.href = 'index.html?search=' + encodeURIComponent(term);
+        } else {
+          window.location.href = 'index.html';
+        }
+      }
+    });
+    // Also allow clicking the search button (it's already a link to index, but we can improve)
+    // The header search button currently points to index.html — we'll leave it simple.
+  </script>
+</body>
+</html>

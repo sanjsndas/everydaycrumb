@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Everyday Crumb Corner – Simple, Honest Recipes & Kitchen Wisdom</title>
+  <meta name="description" content="A cozy independent recipe blog with tested everyday meals, baking guides, and practical kitchen notes. Find your next favorite dish.">
+  <meta name="author" content="Everyday Crumb Corner">
+  <link rel="canonical" href="https://www.everydaycrumbcorner.com/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Everyday Crumb Corner – Simple, Honest Recipes">
+  <meta property="og:description" content="Tested recipes, baking guides, and kitchen wisdom for real life.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.everydaycrumbcorner.com/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&h=630&fit=crop">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Everyday Crumb Corner",
+    "url": "https://www.everydaycrumbcorner.com/",
+    "description": "Simple, honest recipes and kitchen wisdom for everyday cooking.",
+    "author": {
+      "@type": "Person",
+      "name": "Clara Bennett"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Everyday Crumb Corner"
+    }
+  }
+  </script>
+  <!-- Font & minimal styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ----- RESET & VARIABLES ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --cream: #fdfaf6;
+      --paper: #ffffff;
+      --ink: #1e1c1a;
+      --soft-ink: #3e3a37;
+      --muted: #6b6560;
+      --line: #e7e2db;
+      --accent: #b45f3b;
+      --accent-hover: #9a4e2f;
+      --accent-light: #f5ede7;
+      --serif: 'Lora', Georgia, serif;
+      --sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --max-width: 1280px;
+      --article-width: 720px;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.02);
+    }
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* ----- TYPOGRAPHY ----- */
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+    h1 {
+      font-size: 2.6rem;
+    }
+    h2 {
+      font-size: 1.9rem;
+      margin-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.35rem;
+    }
+    h4 {
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+    .article-body h2 {
+      font-size: 1.8rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body h3 {
+      font-size: 1.35rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .article-body p {
+      margin-bottom: 1.2rem;
+      color: var(--soft-ink);
+      font-size: 1.08rem;
+      line-height: 1.8;
+    }
+    /* ----- LAYOUT ----- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .article-container {
+      max-width: var(--article-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    /* ----- HEADER ----- */
+    .site-header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      padding: 0.9rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .logo-icon {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      background: var(--accent);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(45deg);
+      margin-right: 0.2rem;
+    }
+    .logo-text {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    .logo-text span {
+      color: var(--accent);
+    }
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.8rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--soft-ink);
+    }
+    .main-nav a:hover {
+      color: var(--accent);
+    }
+    .header-search {
+      display: flex;
+      align-items: center;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 0.3rem 0.3rem 0.3rem 1rem;
+    }
+    .header-search input {
+      border: none;
+      background: transparent;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      outline: none;
+      width: 160px;
+    }
+    .header-search button {
+      background: var(--accent);
+      border: none;
+      border-radius: 30px;
+      padding: 0.4rem 1rem;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    /* ----- BUTTONS / TAGS ----- */
+    .cat-tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+    }
+    .read-time {
+      color: var(--muted);
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    /* ----- FEATURED AREA ----- */
+    .featured-section {
+      padding: 2.5rem 0 1rem;
+    }
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .featured-main {
+      background: var(--paper);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .featured-main img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+    .featured-main-content {
+      padding: 1.8rem;
+    }
+    .featured-main h2 {
+      font-size: 2rem;
+      margin: 0.5rem 0 0.75rem;
+    }
+    .featured-main p {
+      color: var(--soft-ink);
+      margin-bottom: 1.25rem;
+    }
+    .featured-side {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .featured-side-item {
+      display: flex;
+      gap: 1rem;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      box-shadow: var(--shadow-sm);
+      align-items: flex-start;
+    }
+    .featured-side-item img {
+      width: 80px;
+      height: 80px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .featured-side-item h4 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+    .featured-side-item .meta {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    /* ----- HOMEPAGE SECTION ----- */
+    .section {
+      padding: 2rem 0;
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 0.75rem;
+    }
+    .section-header h2 {
+      margin-bottom: 0;
+      font-size: 1.6rem;
+    }
+    .section-header a {
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    /* ----- CARD GRID ----- */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.1s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+    }
+    .card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--line);
+    }
+    .card-content {
+      padding: 1.25rem 1.25rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card .cat-tag {
+      align-self: flex-start;
+      margin-bottom: 0.6rem;
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: var(--soft-ink);
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+    .card .meta-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding-top: 0.75rem;
+      margin-top: auto;
+    }
+    /* ----- SIDEBAR & MAIN LAYOUT ----- */
+    .home-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 2.5rem;
+      padding: 1rem 0 2rem;
+    }
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .sidebar-block {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .sidebar-block h3 {
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 0.5rem;
+    }
+    .sidebar-list {
+      list-style: none;
+    }
+    .sidebar-list li {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    .sidebar-list a:hover {
+      color: var(--accent);
+    }
+    .sidebar-list .meta {
+      font-size: 0.7rem;
+      color: var(--muted);
+      display: block;
+      margin-top: 0.15rem;
+    }
+    .author-box {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    /* ----- ARTICLE PAGE (hidden by default) ----- */
+    .article-view {
+      display: none;
+      padding: 2rem 0 4rem;
+    }
+    .article-header {
+      margin-bottom: 2rem;
+    }
+    .article-header h1 {
+      font-size: 2.6rem;
+      margin: 0.75rem 0 1rem;
+    }
+    .article-meta {
+      display: flex;
+      gap: 1.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .article-image-full {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      margin: 1.5rem 0;
+    }
+    .article-body {
+      font-size: 1.05rem;
+    }
+    .article-body ul, .article-body ol {
+      margin: 1rem 0 1.5rem 1.5rem;
+    }
+    .article-body li {
+      margin-bottom: 0.5rem;
+      color: var(--soft-ink);
+    }
+    .related-section {
+      margin-top: 3rem;
+      border-top: 1px solid var(--line);
+      padding-top: 2rem;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    /* ----- NEWSLETTER & FAQ ----- */
+    .newsletter-section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+      text-align: center;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .newsletter-section h2 {
+      margin-bottom: 0.5rem;
+    }
+    .newsletter-section p {
+      color: var(--muted);
+      max-width: 500px;
+      margin: 0 auto 1.5rem;
+    }
+    .newsletter-form {
+      display: flex;
+      max-width: 420px;
+      margin: 0 auto;
+      gap: 0.5rem;
+    }
+    .newsletter-form input {
+      flex: 1;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      font-family: var(--sans);
+      outline: none;
+    }
+    .newsletter-form button {
+      background: var(--accent);
+      border: none;
+      color: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 30px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .faq-section {
+      padding: 1rem 0 2rem;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+      padding: 1rem 0;
+    }
+    .faq-item h4 {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+    }
+    .faq-item p {
+      margin-top: 0.75rem;
+      color: var(--soft-ink);
+      display: none;
+    }
+    .faq-item.open p {
+      display: block;
+    }
+    /* ----- FOOTER ----- */
+    .site-footer {
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+      padding: 3rem 0 2rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    .footer-grid h4 {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .footer-grid ul {
+      list-style: none;
+    }
+    .footer-grid li {
+      margin-bottom: 0.5rem;
+      color: var(--muted);
+    }
+    .footer-grid a:hover {
+      color: var(--accent);
+    }
+    .footer-bottom {
+      border-top: 1px solid var(--line);
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 1000px) {
+      .featured-grid {
+        grid-template-columns: 1fr;
+      }
+      .home-layout {
+        grid-template-columns: 1fr;
+      }
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      .related-grid {
+        grid-template-columns: 1fr;
+      }
+      .newsletter-form {
+        flex-direction: column;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .article-header h1 {
+        font-size: 2rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* utility */
+    .hidden {
+      display: none !important;
+    }
+    .search-highlight {
+      background: #fdebd0;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" onclick="showHome(event)">
+        <span class="logo-icon"></span>
+        <span class="logo-text">Everyday<span>Crumb</span>Corner</span>
+      </a>
+      <nav class="main-nav">
+        <ul>
+         <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+      <div class="header-search">
+        <input type="text" id="searchInput" placeholder="Search recipes..." aria-label="Search recipes">
+        <button onclick="performSearch()">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT (homepage) -->
+  <main id="homeView">
+    <!-- FEATURED -->
+    <section class="featured-section container">
+      <div class="featured-grid">
+        <div class="featured-main" id="featuredMain">
+          <!-- dynamic -->
+        </div>
+        <div class="featured-side" id="featuredSide">
+          <!-- dynamic -->
+        </div>
+      </div>
+    </section>
+
+    <!-- HOMEPAGE LAYOUT: ARTICLES + SIDEBAR -->
+    <div class="container home-layout">
+      <div class="articles-column">
+        <div class="section-header">
+          <h2>Latest from the kitchen</h2>
+          <a href="#" onclick="showHome(event)">View all</a>
+        </div>
+        <div class="card-grid" id="articleGrid">
+          <!-- dynamic articles -->
+        </div>
+      </div>
+      <aside class="sidebar">
+        <div class="sidebar-block">
+          <h3>About the author</h3>
+          <div class="author-box">
+            <div class="author-avatar">C</div>
+            <div>
+              <h4 style="margin-bottom:0.1rem;">Clara Bennett</h4>
+              <p style="font-size:0.85rem; color:var(--muted);">Former pastry chef, now writing about the joy of everyday cooking. I believe good food doesn't need to be complicated.</p>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-block">
+          <h3>Popular recipes</h3>
+          <ul class="sidebar-list" id="popularList">
+            <!-- dynamic -->
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3>Recommended</h3>
+          <ul class="sidebar-list" id="recommendedList">
+            <!-- dynamic -->
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="container">
+      <div class="newsletter-section">
+        <h2>Get a fresh recipe every Sunday</h2>
+        <p>Join 12,000+ home cooks. No spam, just one thoughtful email with a new recipe and a kitchen tip.</p>
+        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+          <input type="email" placeholder="Your email address" required aria-label="Email address">
+          <button type="submit">Subscribe</button>
+        </form>
+        <p style="font-size:0.75rem; margin-top:0.75rem;">We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="container faq-section">
+      <div class="section-header">
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <h4>Are your recipes tested? <span>+</span></h4>
+        <p>Every recipe is tested at least three times in a home kitchen. I include weights and volume measurements for accuracy.</p>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <h4>Can I substitute ingredients? <span>+</span></h4>
+        <p>Absolutely. Most recipes include substitution notes. For baking, I recommend sticking to the tested ingredients unless specified.</p>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <h4>Do you accept guest posts? <span>+</span></h4>
+        <p>We occasionally feature guest contributors. Please reach out via the contact page with your idea.</p>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <h4>How can I support the blog? <span>+</span></h4>
+        <p>The best way is to share recipes with friends, leave comments, and subscribe to the newsletter. Thank you!</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ARTICLE VIEW (hidden by default) -->
+  <main id="articleView" class="article-view container">
+    <article id="articleContent">
+      <!-- dynamic -->
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom:0.75rem;">
+            <span class="logo-icon" style="width:22px;height:22px;"></span>
+            <span class="logo-text" style="font-size:1.3rem;">Everyday<span>Crumb</span>Corner</span>
+          </div>
+          <p style="color:var(--muted); max-width:260px;">Simple, honest recipes and kitchen wisdom for everyday cooking. Made with care in a small home kitchen.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#" onclick="showHome(event)">Home</a></li>
+            <li><a href="#" onclick="filterCategory('Breakfast', event)">Breakfast</a></li>
+            <li><a href="#" onclick="filterCategory('Baking', event)">Baking</a></li>
+            <li><a href="#" onclick="filterCategory('Dinner', event)">Dinner</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#" onclick="showStaticPage('about', event)">About</a></li>
+            <li><a href="#" onclick="showStaticPage('contact', event)">Contact</a></li>
+            <li><a href="#" onclick="showStaticPage('privacy', event)">Privacy Policy</a></li>
+            <li><a href="#" onclick="showStaticPage('terms', event)">Terms of Use</a></li>
+            <li><a href="#" onclick="showStaticPage('cookies', event)">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Everyday Crumb Corner. All rights reserved. Built with love and butter.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // --------------------------------------------------------------
+    // ARTICLE DATA (original, long-form content)
+    // --------------------------------------------------------------
+    const articles = [
+      {
+        id: 'sourdough',
+        title: 'The Quiet Joy of Sourdough: A Beginner’s Guide to Wild Yeast',
+        category: 'Baking',
+        readTime: '9 min read',
+        excerpt: 'There’s something almost meditative about nurturing a sourdough starter. This guide walks you through creating your first loaf, from feeding schedules to the final bake.',
+        image: 'https://images.unsplash.com/photo-1585478259715-876acc5be8eb?w=800&h=500&fit=crop',
+        content: `
+          <p>Sourdough baking is less about perfection and more about rhythm. It asks you to slow down, observe, and trust the process. In this guide, I’ll share everything I wish I’d known when I started—including the mistakes that taught me the most.</p>
+          <h2>Starting your starter</h2>
+          <p>All you need is flour, water, and a little patience. Mix equal parts whole wheat flour and warm water in a jar. Let it sit uncovered for 24 hours, then feed it daily with equal parts flour and water. Within 5–7 days, you’ll see bubbles and a tangy aroma.</p>
+          <h2>The first loaf</h2>
+          <p>Once your starter is active, you’re ready to bake. I recommend a simple country loaf: 500g bread flour, 350g water, 100g active starter, and 10g salt. Mix, rest, fold, and let time do the work. A long cold ferment in the fridge develops flavor.</p>
+          <h3>Shaping and scoring</h3>
+          <p>Shaping creates tension, which helps the loaf rise. A simple round boule is forgiving. Score with a sharp blade at a 45-degree angle just before baking.</p>
+          <h2>Baking with steam</h2>
+          <p>Preheat a Dutch oven at 250°C (480°F). Bake covered for 20 minutes, then uncovered for another 20–25 minutes until deep golden. The steam trapped inside gives you that crackly crust.</p>
+          <p>Remember: your first loaf won’t be perfect, and that’s exactly as it should be. Each bake teaches you something new.</p>
+        `
+      },
+      {
+        id: 'pancakes',
+        title: 'Weekend Pancakes: The Fluffiest Buttermilk Recipe',
+        category: 'Breakfast',
+        readTime: '6 min read',
+        excerpt: 'These pancakes are tall, tender, and just tangy enough. The secret is a gentle fold and letting the batter rest for ten minutes.',
+        image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&h=500&fit=crop',
+        content: `
+          <p>Weekend mornings deserve a stack of pancakes that feel like a small celebration. This recipe has been my go-to for years—it’s forgiving, fast, and always delivers.</p>
+          <h2>Ingredients</h2>
+          <ul>
+            <li>2 cups all-purpose flour</li>
+            <li>2 tablespoons sugar</li>
+            <li>2 teaspoons baking powder</li>
+            <li>1/2 teaspoon baking soda</li>
+            <li>1/2 teaspoon salt</li>
+            <li>2 cups buttermilk</li>
+            <li>2 large eggs</li>
+            <li>4 tablespoons melted butter</li>
+          </ul>
+          <h2>Method</h2>
+          <p>Whisk dry ingredients. In another bowl, whisk buttermilk, eggs, and butter. Pour wet into dry and stir just until combined—lumps are fine. Let rest for 10 minutes.</p>
+          <p>Heat a griddle over medium. Pour 1/4 cup batter per pancake. Cook until bubbles form and edges look set, about 2–3 minutes. Flip and cook another minute.</p>
+          <h2>Tips for fluffiness</h2>
+          <p>Don’t overmix. The rest period allows the flour to hydrate and the leaveners to activate. Serve with real maple syrup and a pat of butter.</p>
+        `
+      },
+      {
+        id: 'roastchicken',
+        title: 'A Sunday Roast Chicken That Never Fails',
+        category: 'Dinner',
+        readTime: '8 min read',
+        excerpt: 'Crispy skin, juicy meat, and a pan full of golden vegetables. This is the roast chicken I make when I want to feel like a proper cook.',
+        image: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=800&h=500&fit=crop',
+        content: `
+          <p>A good roast chicken is one of the most satisfying things you can make. It’s simple, but the details matter: dry skin, high heat, and a generous hand with salt.</p>
+          <h2>The prep</h2>
+          <p>Pat the chicken dry with paper towels. Rub with olive oil, then season generously inside and out with salt and pepper. Let it sit at room temperature for 30 minutes.</p>
+          <h2>Roasting</h2>
+          <p>Preheat oven to 220°C (425°F). Toss chopped carrots, potatoes, and onions with oil in a roasting pan. Place chicken on top. Roast for 20 minutes, then reduce to 200°C (400°F) and continue for 40–50 minutes, until juices run clear.</p>
+          <h3>Resting is key</h3>
+          <p>Let the chicken rest for 15 minutes before carving. This allows the juices to redistribute. Serve with the roasted vegetables and pan drippings.</p>
+        `
+      },
+      {
+        id: 'cookies',
+        title: 'Brown Butter Chocolate Chunk Cookies',
+        category: 'Baking',
+        readTime: '7 min read',
+        excerpt: 'Nutty brown butter takes these cookies from good to unforgettable. Crisp edges, chewy centers, and pools of dark chocolate.',
+        image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800&h=500&fit=crop',
+        content: `
+          <p>Brown butter is a game-changer in baking. It adds a deep, toasty flavor that makes these cookies taste like they came from a fancy bakery.</p>
+          <h2>Brown the butter</h2>
+          <p>Melt 1 cup butter in a saucepan over medium heat. Cook, swirling, until the milk solids turn golden brown and smell nutty. Pour into a bowl and cool for 10 minutes.</p>
+          <h2>The dough</h2>
+          <p>Whisk 1 cup brown sugar and 1/2 cup white sugar into the butter. Add 2 eggs and 2 teaspoons vanilla. Fold in 2 1/4 cups flour, 1 teaspoon baking soda, and 1 teaspoon salt. Finally, add 200g chopped dark chocolate.</p>
+          <p>Chill the dough for at least 30 minutes. Scoop onto baking sheets and bake at 180°C (350°F) for 10–12 minutes.</p>
+        `
+      },
+      {
+        id: 'lentilsoup',
+        title: 'Cozy Lentil Soup with Lemon and Greens',
+        category: 'Dinner',
+        readTime: '6 min read',
+        excerpt: 'A nourishing, pantry-friendly soup that tastes even better the next day. The lemon at the end brightens everything.',
+        image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&h=500&fit=crop',
+        content: `
+          <p>This is the soup I make when I need comfort but also want something wholesome. It’s vegan, protein-packed, and endlessly adaptable.</p>
+          <h2>Ingredients</h2>
+          <ul>
+            <li>1 cup dried green or brown lentils, rinsed</li>
+            <li>1 onion, diced</li>
+            <li>2 carrots, diced</li>
+            <li>3 garlic cloves, minced</li>
+            <li>1 teaspoon cumin</li>
+            <li>1/2 teaspoon smoked paprika</li>
+            <li>6 cups vegetable broth</li>
+            <li>2 cups chopped spinach or kale</li>
+            <li>Juice of 1 lemon</li>
+          </ul>
+          <h2>Method</h2>
+          <p>Sauté onion and carrot in olive oil until soft. Add garlic and spices, cook 1 minute. Add lentils and broth. Simmer for 25–30 minutes until lentils are tender. Stir in greens and lemon juice. Season to taste.</p>
+          <p>Serve with crusty bread and a drizzle of olive oil.</p>
+        `
+      },
+      {
+        id: 'bananabread',
+        title: 'The Best Banana Bread (One Bowl, No Mixer)',
+        category: 'Baking',
+        readTime: '5 min read',
+        excerpt: 'My most requested recipe. Moist, deeply banana-flavored, and made with simple ingredients you already have.',
+        image: 'https://images.unsplash.com/photo-1605197161470-5d2e8c4c1b0e?w=800&h=500&fit=crop',
+        content: `
+          <p>Banana bread is a staple in our house. This version uses browned bananas and a touch of yogurt for extra moisture.</p>
+          <h2>Ingredients</h2>
+          <ul>
+            <li>3 very ripe bananas, mashed</li>
+            <li>1/2 cup melted butter</li>
+            <li>3/4 cup brown sugar</li>
+            <li>2 eggs</li>
+            <li>1/4 cup plain yogurt</li>
+            <li>1 teaspoon vanilla</li>
+            <li>1 1/2 cups flour</li>
+            <li>1 teaspoon baking soda</li>
+            <li>1/2 teaspoon salt</li>
+          </ul>
+          <h2>Method</h2>
+          <p>Mix wet ingredients in a large bowl. Add dry ingredients and stir until just combined. Pour into a greased loaf pan. Bake at 175°C (350°F) for 55–65 minutes, until a toothpick comes out clean.</p>
+        `
+      },
+      {
+        id: 'kitchentips',
+        title: '10 Small Kitchen Habits That Changed How I Cook',
+        category: 'Kitchen Notes',
+        readTime: '7 min read',
+        excerpt: 'From sharpening my knives weekly to keeping a “use first” basket in the fridge, these small shifts made cooking more joyful.',
+        image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&h=500&fit=crop',
+        content: `
+          <p>It’s rarely the big purchases or fancy gadgets that transform our cooking. It’s the small, consistent habits.</p>
+          <h2>1. Sharp knives</h2>
+          <p>A sharp knife is safer and makes prep enjoyable. I sharpen mine every Sunday.</p>
+          <h2>2. The “use first” basket</h2>
+          <p>In my fridge, there’s a clear container for items that need to be eaten soon. It’s reduced food waste dramatically.</p>
+          <h2>3. Salt in layers</h2>
+          <p>Seasoning as I go—rather than at the end—makes a noticeable difference in flavor.</p>
+          <p>These habits don’t cost money, but they pay off every single day.</p>
+        `
+      },
+      {
+        id: 'eggs',
+        title: 'How to Cook Eggs Every Way: A Practical Guide',
+        category: 'Breakfast',
+        readTime: '10 min read',
+        excerpt: 'From soft scrambled to perfect poached, here’s a no-nonsense reference for cooking eggs with confidence.',
+        image: 'https://images.unsplash.com/photo-1587486913049-53f9e6f3d9f4?w=800&h=500&fit=crop',
+        content: `
+          <p>Eggs are one of the most versatile ingredients, yet they can be intimidating. This guide covers the essentials.</p>
+          <h2>Scrambled</h2>
+          <p>Low and slow is the secret. Whisk eggs with a pinch of salt, cook over low heat, stirring constantly. Remove from heat while still slightly runny.</p>
+          <h2>Poached</h2>
+          <p>Bring water to a gentle simmer. Add a splash of vinegar. Crack an egg into a small bowl and slide it into the water. Cook for 3 minutes.</p>
+          <h2>Soft-boiled</h2>
+          <p>Lower eggs into boiling water. Cook for 6 minutes for a jammy yolk. Transfer to ice water.</p>
+          <p>Practice makes perfect—and even imperfect eggs are still delicious.</p>
+        `
+      }
+    ];
+
+    // Additional articles (for variety, but we already have 8, sufficient)
+    // We'll use these 8 as the main set.
+
+    // --------------------------------------------------------------
+    // RENDER FUNCTIONS
+    // --------------------------------------------------------------
+    function renderFeatured() {
+      const main = articles[0];
+      const sideItems = [articles[1], articles[2]];
+      
+      document.getElementById('featuredMain').innerHTML = `
+        <img src="${main.image}" alt="Sourdough bread on a wooden board">
+        <div class="featured-main-content">
+          <span class="cat-tag">${main.category}</span>
+          <h2>${main.title}</h2>
+          <p>${main.excerpt}</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span class="read-time">${main.readTime}</span>
+            <a href="#" onclick="openArticle('${main.id}', event)" style="font-weight:500; color:var(--accent);">Read article →</a>
+          </div>
+        </div>
+      `;
+      document.getElementById('featuredSide').innerHTML = sideItems.map(item => `
+        <div class="featured-side-item" onclick="openArticle('${item.id}', event)" style="cursor:pointer;">
+          <img src="${item.image}" alt="${item.title}">
+          <div>
+            <span class="cat-tag" style="margin-bottom:0.25rem;">${item.category}</span>
+            <h4>${item.title}</h4>
+            <span class="meta">${item.readTime}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderArticleCards(filter = 'all', searchTerm = '') {
+      const grid = document.getElementById('articleGrid');
+      let filtered = articles;
+      if (filter !== 'all') {
+        filtered = filtered.filter(a => a.category === filter);
+      }
+      if (searchTerm.trim() !== '') {
+        const term = searchTerm.toLowerCase();
+        filtered = filtered.filter(a => 
+          a.title.toLowerCase().includes(term) || 
+          a.excerpt.toLowerCase().includes(term) ||
+          a.category.toLowerCase().includes(term)
+        );
+      }
+      if (filtered.length === 0) {
+        grid.innerHTML = '<p style="padding:2rem;text-align:center;color:var(--muted);">No articles found. Try a different search.</p>';
+        return;
+      }
+      grid.innerHTML = filtered.map(a => `
+        <div class="card" onclick="openArticle('${a.id}', event)" style="cursor:pointer;">
+          <img src="${a.image}" alt="${a.title}">
+          <div class="card-content">
+            <span class="cat-tag">${a.category}</span>
+            <h3>${a.title}</h3>
+            <p>${a.excerpt}</p>
+            <div class="meta-row">
+              <span>${a.readTime}</span>
+              <span>Read →</span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderSidebarLists() {
+      // Popular (first 4)
+      const popular = articles.slice(0, 4);
+      document.getElementById('popularList').innerHTML = popular.map(a => `
+        <li>
+          <a href="#" onclick="openArticle('${a.id}', event)">${a.title}</a>
+          <span class="meta">${a.category} · ${a.readTime}</span>
+        </li>
+      `).join('');
+      // Recommended (next 4)
+      const recommended = articles.slice(4, 8);
+      document.getElementById('recommendedList').innerHTML = recommended.map(a => `
+        <li>
+          <a href="#" onclick="openArticle('${a.id}', event)">${a.title}</a>
+          <span class="meta">${a.category} · ${a.readTime}</span>
+        </li>
+      `).join('');
+    }
+
+    function openArticle(id, event) {
+      if (event) event.preventDefault();
+      const article = articles.find(a => a.id === id);
+      if (!article) return;
+      
+      // hide home, show article
+      document.getElementById('homeView').classList.add('hidden');
+      document.getElementById('articleView').style.display = 'block';
+      
+      const related = articles.filter(a => a.id !== id && a.category === article.category).slice(0,3);
+      // if less than 3, fill with others
+      while (related.length < 3) {
+        const extra = articles.find(a => a.id !== id && !related.includes(a));
+        if (extra) related.push(extra); else break;
+      }
+      
+      document.getElementById('articleContent').innerHTML = `
+        <div class="article-header">
+          <span class="cat-tag">${article.category}</span>
+          <h1>${article.title}</h1>
+          <div class="article-meta">
+            <span>By Clara Bennett</span>
+            <span>${article.readTime}</span>
+            <span>Published ${new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: '2025' })}</span>
+          </div>
+        </div>
+        <img class="article-image-full" src="${article.image}" alt="${article.title}">
+        <div class="article-body">
+          ${article.content}
+        </div>
+        <div class="related-section">
+          <h3>Related recipes</h3>
+          <div class="related-grid">
+            ${related.map(r => `
+              <div class="card" onclick="openArticle('${r.id}', event)" style="cursor:pointer;">
+                <img src="${r.image}" alt="${r.title}">
+                <div class="card-content">
+                  <span class="cat-tag">${r.category}</span>
+                  <h4 style="font-size:1rem;">${r.title}</h4>
+                  <span style="font-size:0.75rem;color:var(--muted);">${r.readTime}</span>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showHome(event) {
+      if (event) event.preventDefault();
+      document.getElementById('articleView').style.display = 'none';
+      document.getElementById('homeView').classList.remove('hidden');
+      renderArticleCards('all', '');
+      document.getElementById('searchInput').value = '';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function filterCategory(category, event) {
+      if (event) event.preventDefault();
+      document.getElementById('articleView').style.display = 'none';
+      document.getElementById('homeView').classList.remove('hidden');
+      renderArticleCards(category, '');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function performSearch() {
+      const term = document.getElementById('searchInput').value;
+      document.getElementById('articleView').style.display = 'none';
+      document.getElementById('homeView').classList.remove('hidden');
+      renderArticleCards('all', term);
+    }
+
+    function toggleFaq(el) {
+      el.classList.toggle('open');
+      const span = el.querySelector('h4 span');
+      if (span) span.textContent = el.classList.contains('open') ? '−' : '+';
+    }
+
+    function subscribeNewsletter(e) {
+      e.preventDefault();
+      const input = e.target.querySelector('input');
+      if (input.value) {
+        alert('Thank you for subscribing! Check your inbox for a welcome note.');
+        input.value = '';
+      }
+    }
+
+    // Static pages (about, contact, privacy, terms, cookies)
+    function showStaticPage(page, event) {
+      if (event) event.preventDefault();
+      document.getElementById('homeView').classList.add('hidden');
+      document.getElementById('articleView').style.display = 'block';
+      
+      const titles = {
+        about: 'About Everyday Crumb Corner',
+        contact: 'Contact Us',
+        privacy: 'Privacy Policy',
+        terms: 'Terms of Use',
+        cookies: 'Cookie Policy'
+      };
+      const contents = {
+        about: `
+          <p>Everyday Crumb Corner is an independent recipe blog founded by Clara Bennett, a former pastry chef who traded restaurant kitchens for a quieter life of writing, testing, and sharing recipes.</p>
+          <p>Our philosophy is simple: good food doesn’t have to be complicated. We focus on approachable, honest cooking that fits into real life—whether you’re feeding a family, cooking for one, or just learning your way around the kitchen.</p>
+          <p>Every recipe is tested multiple times, and we include weights and volume measurements for accuracy. We believe in transparent, useful content with no fluff.</p>
+        `,
+        contact: `
+          <p>We love hearing from readers. Whether you have a question about a recipe, a suggestion, or just want to say hello, drop us a line.</p>
+          <p><strong>Email:</strong> hello@everydaycrumbcorner.com</p>
+          <p>For collaborations or press inquiries, please use the same email with “Collaboration” in the subject line.</p>
+          <p>We typically respond within 2–3 business days.</p>
+        `,
+        privacy: `
+          <p>Your privacy is important to us. This policy explains what data we collect and how we use it.</p>
+          <p>We collect email addresses only when you voluntarily subscribe to our newsletter. We use that information solely to send you recipe updates. You can unsubscribe at any time.</p>
+          <p>We use basic analytics (such as page views) to understand which recipes are most helpful. This data is anonymized and never sold.</p>
+          <p>We do not share your personal information with third parties except as required by law.</p>
+        `,
+        terms: `
+          <p>By using Everyday Crumb Corner, you agree to these terms.</p>
+          <p>All content, including recipes, photographs, and text, is the property of Everyday Crumb Corner and protected by copyright. You may not republish or redistribute content without written permission.</p>
+          <p>You are welcome to link to our recipes and share them on social media. If you adapt a recipe, please credit Everyday Crumb Corner.</p>
+          <p>We are not liable for any outcome from following our recipes. Use your best judgment in the kitchen.</p>
+        `,
+        cookies: `
+          <p>We use minimal cookies to improve your browsing experience. These are small text files stored on your device.</p>
+          <p>We use functional cookies to remember your preferences and analytics cookies to understand site usage. You can disable cookies in your browser settings at any time.</p>
+          <p>By continuing to use our site, you consent to our use of cookies as described here.</p>
+        `
+      };
+      
+      document.getElementById('articleContent').innerHTML = `
+        <div class="article-header">
+          <h1>${titles[page] || 'Page'}</h1>
+          <div class="article-meta" style="border-bottom:none;"></div>
+        </div>
+        <div class="article-body">
+          ${contents[page] || '<p>Content coming soon.</p>'}
+        </div>
+      `;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // --------------------------------------------------------------
+    // INIT
+    // --------------------------------------------------------------
+    renderFeatured();
+    renderArticleCards('all', '');
+    renderSidebarLists();
+    
+    // attach search on enter
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        performSearch();
+      }
+    });
+    
+    // close FAQ when clicking another
+    // already handled inline
+  </script>
+</body>
+</html>
